@@ -38,11 +38,17 @@ class WeatherClient:
         """
         self.__check_place(city.strip() +'+'+ uf.strip())
 
+    def get_place(self):
+        ''' retorna a localidade atual '''
+        return self.__check_place()
+
 
     def reload_weather_info(self):
         """ 
         Método responsável por obter informações sobre a temperatura a partir do endereço weather_consts.URL
 
+        uso do cssselect (fromstring)
+        http://pythonhosted.org//cssselect/#quickstart
         """
         
         place = self.__check_place()
