@@ -1,10 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from PyQt4.QtGui import QIcon, QSystemTrayIcon, QApplication, QMenu, QAction,\
-     qApp, QMessageBox, QPushButton, QLineEdit, QLabel
+     qApp, QMessageBox, QPushButton, QLineEdit, QLabel, QWidget
 from PyQt4.QtCore import QString
 from weather_client import WeatherClient
 import weather_consts
+import pdb
 
 class Eventer:
     ''' Cuida dos eventos disparados'''
@@ -18,7 +19,7 @@ class Eventer:
         ico = weather_consts.weather_types.get(forecast)
         if ico:
             tray.setIcon(QIcon.fromTheme())
-        tray.showMessage('Tempo agora:', temperature + '°C ' + forecast)
+        tray.showMessage('Tempo agora:', (temperature + '°C ' + forecast).decode('utf-8'))
 
     @staticmethod
     def show_about():
@@ -47,24 +48,32 @@ class Eventer:
         widget.close()
 
 
-class LocalityWidGet(object):
+class LocalityWidGet(QWidget):
     """Modal para alterer a localidade da previção do tempo"""
     
     def __init__(self):
         super(LocalityWidGet, self).__init__()
         
-        self.setWindowTitle = 'Configurações'
-        self.setGeometry(300, 300, 300, 300)
+        self.setWindowTitle = 'Settings'
+        self.setGeometry(450, 300, 400, 200)
 
-        self.locality_label = QLabel(self)
-        self.locality_label.move(130, 15)
+        self.locality_label = QLabel('Localidade: ',self)
+        self.locality_label.move(20, 35)
+
+        self.locality_label_example = QLabel('Exemplo: Porto Alegre, RS', self)
+        self.locality_label_example.move(100, 60)
 
         self.locality_input_text = QLineEdit(self)
-        self.locality_input_text.move(130, 20)
+        self.locality_input_text.move(100, 30)
+
+        wc = WeatherClient()
+        current_locality = wc.get_place()
+        self.locality_input_text.setText(current_locality.replace('+', ', ').decode('utf-8'))
 
         self.btnOk = QPushButton('OK', self)
-        self.btnOk.move(290, 290)
+        self.btnOk.move(250, 150)
         self.btnOk.clicked.connect(lambda: Eventer.save_new_locality(self))
+
 
         self.show()
 
@@ -79,11 +88,11 @@ class Menu(QMenu):
         
         action_about = QAction(QIcon.fromTheme('help-about'),'Sobre', self)
         action_about.triggered.connect(Eventer.show_about)
-        self.addAction(self.action_about)
+        self.addAction(action_about)
 
-        action_settings = QAction(QIcon.fromTheme('emblem-system'), 'Configurações', self)
+        action_settings = QAction(QIcon.fromTheme('emblem-system'), u'Configurações', self)
         action_settings.triggered.connect(Eventer.show_settings)
-        self.addAction()
+        self.addAction(action_settings)
         
         exitAction = QAction(QIcon.fromTheme('application-exit'),'Sair', self)
         exitAction.triggered.connect(qApp.quit)
@@ -103,7 +112,7 @@ class WeatherTray(QSystemTrayIcon):
             .connect(lambda: Eventer.show_weather_forecast_message(self))
 
 
-    
+
 
 app = QApplication([])
 tray = WeatherTray()
