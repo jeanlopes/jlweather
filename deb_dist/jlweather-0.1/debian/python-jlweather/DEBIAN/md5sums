@@ -1,0 +1,17 @@
+e2882c6977d20d344107b961cd5c9cfc  usr/bin/jlweather
+32ccc0cdd22b0a244ccb57a83e892efe  usr/lib/python2.7/dist-packages/jlweather-0.1.egg-info
+d41d8cd98f00b204e9800998ecf8427e  usr/lib/python2.7/dist-packages/jlweather/__init__.py
+3c3f027cf8acd4f8f220c872156d1b71  usr/lib/python2.7/dist-packages/jlweather/jlweather_client.py
+9c98f2977369558a82620922710b685e  usr/lib/python2.7/dist-packages/jlweather/jlweather_consts.py
+8fc43a384661c5f5d270fe83ae45c3e5  usr/lib/python2.7/dist-packages/jlweather/lib/__init__.py
+8fc43a384661c5f5d270fe83ae45c3e5  usr/lib/python2.7/dist-packages/jlweather/lib/cssselect/__init__.py
+f6657336c43877fbd8e359f027eeb414  usr/lib/python2.7/dist-packages/jlweather/lib/cssselect/parser.py
+50a08d2672067597540249dd97b56a95  usr/lib/python2.7/dist-packages/jlweather/lib/cssselect/xpath.py
+53259edd66851b1c185d69e6a3aeb35e  usr/lib/python2.7/dist-packages/jlweather/lib/daemon/__init__.py
+671be8f81c52d6f9fd64c892cbc86d07  usr/lib/python2.7/dist-packages/jlweather/lib/daemon/daemon.py
+dd76e15bfea0f481da1385b97c5b7f5f  usr/lib/python2.7/dist-packages/jlweather/lib/daemon/pidlockfile.py
+e28f288674a6c31c8931ecb66d5aa070  usr/lib/python2.7/dist-packages/jlweather/lib/daemon/runner.py
+5a198312543860a71545aa0e44cb2ca4  usr/lib/python2.7/dist-packages/jlweather/lib/daemon/version/__init__.py
+20ed17d8e944e69d7c49ebcdf654c6b2  usr/lib/python2.7/dist-packages/jlweather/lib/daemon/version/version_info.py
+833451cd4568bf819698555015a5a9cb  usr/share/applications/jlweather.desktop
+3bcbf222bd812b378e2a609d2b6ab741  usr/share/doc/python-jlweather/changelog.Debian.gz

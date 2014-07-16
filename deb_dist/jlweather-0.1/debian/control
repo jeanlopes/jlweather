@@ -1,0 +1,12 @@
+Source: jlweather
+Maintainer: Jean Lopes <jeanoliveiralopes@gmail.com>
+Section: python
+Priority: optional
+Build-Depends: python-all (>= 2.6.6-3), debhelper (>= 7.4.3)
+Standards-Version: 3.9.1
+
+Package: python-jlweather
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: A small app system tray to show current weather forecast
+

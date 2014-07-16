@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: jlweather
+Version: 0.1
+Summary: A small app system tray to show current weather forecast
+Home-page: https://github.com/jeanlopes/jlweather
+Author: Jean Lopes
+Author-email: jeanoliveiralopes@gmail.com
+License: GPL
+Description: UNKNOWN
+Keywords: weather,forecast
+Platform: UNKNOWN

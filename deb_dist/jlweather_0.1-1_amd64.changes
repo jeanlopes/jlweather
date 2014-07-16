@@ -1,0 +1,22 @@
+Format: 1.8
+Date: Tue, 15 Jul 2014 22:02:46 -0300
+Source: jlweather
+Binary: python-jlweather
+Architecture: all
+Version: 0.1-1
+Distribution: unstable
+Urgency: low
+Maintainer: Jean Lopes <jeanoliveiralopes@gmail.com>
+Changed-By: Jean Lopes <jeanoliveiralopes@gmail.com>
+Description: 
+ python-jlweather - A small app system tray to show current weather forecast
+Changes: 
+ jlweather (0.1-1) unstable; urgency=low
+ .
+   * source package automatically created by stdeb 0.7.1
+Checksums-Sha1: 
+ 89d9ced978ca1d4e5558fa2b54ee15dbd68cf08a 24774 python-jlweather_0.1-1_all.deb
+Checksums-Sha256: 
+ 99a064aeb69c3d6258087649c95f938035563e96b9e4c6fb2503728b67f45026 24774 python-jlweather_0.1-1_all.deb
+Files: 
+ 4c782981749ca4ab07d746ccf61f4268 24774 python optional python-jlweather_0.1-1_all.deb

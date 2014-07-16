@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=JLWeather
+Comment=Temperature and forecast indicator in system tray
+Exec=jlweather
+Terminal=true
+Type=Application
+Categories=Utility;TrayIcon;
+Keywords=Forecast,Weather,Clime,Temperature
+OnlyShowIn=GNOME;Unity;
+StartupNotify=true
